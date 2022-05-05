@@ -1,0 +1,29 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let paciente of pacientes">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">person</i>
+                        </div>
+                        <h3 class="card-title">{{paciente.nome}}</h3>
+                        <p class="card-category">Pressão S/D</p>
+                        <div id="heart" *ngIf="paciente.changed">
+                            <img class="bottom" src="https://i.stack.imgur.com/iBCpb.png" width="30px">
+                        </div>
+                        <div *ngIf="!paciente.changed">
+                            <img class="bottom" src="https://i.stack.imgur.com/iBCpb.png" width="30px">
+                        </div>
+                        <h3 class="card-title">{{paciente.pressaoSistolica}}/{{paciente.pressaoDiastolica}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">date_range</i> Last 24 Hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
